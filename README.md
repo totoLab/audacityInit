@@ -3,11 +3,12 @@ Little script that initialieses an arbitrary directory structure that suits my n
 
 ## SYNOPSIS <br />
 audacityInitProject [OPTION]  <br />
+
 You must enter one option when running the script.
 
 ## OPTIONS <br />
-- i creates the directories the project following a certain structure
-- f zips everything using zip
+- `i` creates the directories the project following a certain structure
+- `f` zips everything using zip
 
 `"i" option`:
 This option creates interactively the structure asking where to put the origin. <br />
