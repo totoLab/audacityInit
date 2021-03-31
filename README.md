@@ -12,7 +12,9 @@ You must enter one option when running the script.
 
 `"i" option`:
 This option creates interactively the structure asking where to put the origin. <br />
+```
 Structure: "defaultParentFolder/name-of-the-project/projectData/output/" <br />
+```
 I usually import the only .wav file in "<name-of-the-project>/" and save the project file in "projectData/", then when exporting parts of the recordings I put them in "output/".
 
 `"f" option`:
