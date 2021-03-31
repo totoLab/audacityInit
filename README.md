@@ -23,5 +23,5 @@ This option zips "projectData/" and the .wav file as individual archives, you'll
 
 ### DEPENDENCIES
 ```
-zenity, zip
+zenity, 7z
 ```
