@@ -64,6 +64,7 @@ workFinished(){
     fi
 }
 
+#gets options
 if [ $1 != "${1#[Ii]}" ] ;then
     initialSetup
 elif [ $1 != "${1#[Ff]}" ] ;then
