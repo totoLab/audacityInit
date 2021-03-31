@@ -12,8 +12,7 @@ OPTIONS
 
 "i" option:
     This option creates interactively the structure asking where to put the origin.
-    Structure: "defaultParentFolder"/"name-of-the-project"/projectData/output/
-
+    Structure: "defaultParentFolder/name-of-the-project/projectData/output/"
     I usually import the only .wav file in "<name-of-the-project>/" and save the project file in "projectData/", then when exporting parts of the recordings I put them in "output/".
 
 "f" option:
