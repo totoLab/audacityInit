@@ -35,12 +35,12 @@ initialSetup() {
 outputExport(){
     newName="output${1}"
     cp -r $defaultParent/$1/projectData/output/ $2/$newName
-    cd $2 && zip -r "${newName}.zip" "$newName/" && rm -Ir $newName
+    cd $2 && 7z a "${newName}.7z" "$newName/" && rm -Ir $newName
 }
 
 zipEverything(){
-    cd "$defaultParent/$1/" && zip -r projectData.zip "projectData/"
-    zip "original${1}.zip" *.wav
+    cd "$defaultParent/$1/" && 7z a projectData.7z "projectData/"
+    7z a "original${1}.7z" *.wav
 }
 
 workFinished(){
@@ -55,8 +55,8 @@ workFinished(){
     elif [ "$answer" != "${answer#[Yy]}" ] ; then
         echo "Well done!"
         read -p "I'm going to zip everything in the project to reduce space. Do you want to export the output folder as separate? [Y/n]" outputChoice
-        answer=${answer:-y}
-        if [ "$answer" != "${answer#[Yy]}" ] ;then
+        outputChoice=${outputChoice:-y}
+        if [ "$outputChoice" != "${outputChoice#[Yy]}" ] ;then
             outputExportFolder="$(zenity --file-selection --directory --title 'Select folder for the exported output')"
             outputExport $project $outputExportFolder
         fi
