@@ -2,6 +2,7 @@
 #defaults here /// create a folder in Music/church with the date of the recording and in there projectData
 recordingDate="dateDummy"
 defaultParent="$HOME/Music/church"
+dependencies=( "zenity" "7z")
 # start a project with these fancy functions U.U
 importRawRecording () {
     rawFile="$(zenity --file-selection --title "Import a raw recording file")"
@@ -63,6 +64,19 @@ workFinished(){
         zipEverything $project
     fi
 }
+
+# initial check for depencies
+checkForDependencies(){
+    for i in "${dependencies[@]}"
+    do
+        command -v $i >/dev/null 2>&1 || { 
+            echo >&2 "$i required, can't run without it."; 
+            exit 1; 
+        }
+    done
+}
+
+checkForDependencies
 
 #gets options
 if [ $1 != "${1#[Ii]}" ] ;then
