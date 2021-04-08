@@ -47,6 +47,7 @@ zipEverything(){
 workFinished(){
     read -p "Press enter and select your project " dummy
     project="$(zenity --file-selection --directory)"
+    checkForStructure $project
     project="$(basename "$project")"
     read -p "Have you finished with this project? [y/N] " answer
     answer=${answer:-n}
@@ -62,6 +63,15 @@ workFinished(){
             outputExport $project $outputExportFolder
         fi
         zipEverything $project
+    fi
+}
+
+#check for correct structure
+checkForStructure(){
+    if [ ! -d "$1/projectData/output" ] ;then
+        echo "$1/projectData/output";
+	    echo "This folder has not the correct structure, please check if it contains projectData/output and retry.";
+        exit 1;
     fi
 }
 
