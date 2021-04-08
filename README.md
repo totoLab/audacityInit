@@ -1,5 +1,5 @@
 # Audacity Init Project
-Little script that initialieses an arbitrary directory structure that suits my needs for audio editing for my church recordings.
+Little script that initialieses an arbitrary directory structure that suits my needs for audio editing for my church recordings. Works on Linux.
 
 ### SYNOPSIS <br />
 audacityInitProject [OPTION]  <br />
