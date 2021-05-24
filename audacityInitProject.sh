@@ -41,7 +41,7 @@ outputExport(){
 
 zipEverything(){
     cd "$defaultParent/$1/" && 7z a projectData.7z "projectData/"
-    7z a "original${1}.7z" *.wav
+    7z a "original${1}.7z" *.mp3 && 7z a "original${1}.7z" *.wav
 }
 
 workFinished(){

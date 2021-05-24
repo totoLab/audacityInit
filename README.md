@@ -15,10 +15,10 @@ This option creates interactively the structure asking where to put the origin. 
 ```
 Structure: "defaultParentFolder/name-of-the-project/projectData/output/"
 ```
-I usually import the only .wav file in "<name-of-the-project>/" and save the project file in "projectData/", then when exporting parts of the recordings I put them in "output/".
+I usually import the only .mp3 file in "<name-of-the-project>/" and save the project file in "projectData/", then when exporting parts of the recordings I put them in "output/".
 
 `"f" option`:
-This option zips "projectData/" and the .wav file as individual archives, you'll have to remove original folders manually <br />
+This option zips "projectData/" and the .mp3 and/or .wav file as individual archives, you'll have to remove original folders manually <br />
 (optional: the scripts is going to ask if you to zip the "output/" folder, moving it somewhere else based on your needs - enabled by default).
 
 ### DEPENDENCIES
