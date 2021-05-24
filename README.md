@@ -19,7 +19,7 @@ I usually import the only .mp3 file in "<name-of-the-project>/" and save the pro
 
 `"f" option`:
 This option zips "projectData/" and the .mp3 and/or .wav file as individual archives, you'll have to remove original folders manually <br />
-(optional: the scripts is going to ask if you to zip the "output/" folder, moving it somewhere else based on your needs - enabled by default).
+(optional: the scripts is going to ask if you to zip the "output/" folder, moving it somewhere else based on your needs - disabled by default).
 
 ### DEPENDENCIES
 ```

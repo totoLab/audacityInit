@@ -56,8 +56,8 @@ workFinished(){
         echo "Take your time."
     elif [ "$answer" != "${answer#[Yy]}" ] ; then
         echo "Well done!"
-        read -p "I'm going to zip everything in the project to reduce space. Do you want to export the output folder as separate? [Y/n]" outputChoice
-        outputChoice=${outputChoice:-y}
+        read -p "I'm going to zip everything in the project to reduce space. Do you want to export the output folder as separate? [y/N]" outputChoice
+        outputChoice=${outputChoice:-n}
         if [ "$outputChoice" != "${outputChoice#[Yy]}" ] ;then
             outputExportFolder="$(zenity --file-selection --directory --title 'Select folder for the exported output')"
             outputExport $project $outputExportFolder
