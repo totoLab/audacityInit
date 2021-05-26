@@ -46,7 +46,7 @@ zipEverything(){
 
 workFinished(){
     read -p "Press enter and select your project " dummy
-    project="$(zenity --file-selection --directory)"
+    project="$(zenity --file-selection --directory --filename="$defaultParent/")"
     checkForStructure $project
     project="$(basename "$project")"
     read -p "Have you finished with this project? [y/N] " answer
