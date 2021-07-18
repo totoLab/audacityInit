@@ -11,9 +11,9 @@ importRawRecording () {
 } 
 
 folderStructure() {
-    mkdir "$1/$2"
-    mkdir "$1/$2/projectData/"
-    mkdir "$1/$2/projectData/output"
+    mkdir "$1/$2" &&
+    mkdir "$1/$2/projectData/" &&
+    mkdir "$1/$2/projectData/output" &&
     importRawRecording "$1/$2/"
 }
 
